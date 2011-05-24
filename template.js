@@ -22,9 +22,8 @@
     
     $("#template-scratch").remove();
     
-    setupMenu();
-    setupCarousel();
-    setupGrowBoxes();
+//Add other page-ready callbacks here.
+    
   }
 
   console.log("blarg!");  

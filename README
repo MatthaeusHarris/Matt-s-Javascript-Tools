@@ -1,0 +1,34 @@
+template.js:  
+A pure javascript html template system.  Template files for html widgets can be defined in separate files, using %variable% for variable substitution.  Variables are replaced by the contents of the div with the same class, thus:
+
+templates/test.html:
+<div class="container">
+  <div class="title">%title%</div>
+  <div class="body">%body%</div>
+  <div class="footer">This is the footer.</div>
+</div>
+
+template call:
+
+<div class="template" template="templates/test.html">
+  <div class="title">Title goes here</div>
+  <div class="body">
+<p>Body content goes here.<br />
+<span class="italics">HTML</span> content is allowed.</p>
+</div>
+</div>
+
+This will render to:
+
+<div class="template" template="templates/test.html">
+  <div class="container">
+    <div class="title">Title goes here</div>
+    <div class="body">
+<p>Body content goes here.<br />
+<span class="italics">HTML</span> content is allowed.</p>
+    </div>
+    <div class="footer">This is the footer.</div>
+  </div>
+</div>
+
+Currently, templates cannot contain other templates, and more complicated variable substitution is not supported.  
